@@ -21,3 +21,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('admin', ['uses' => 'Admin\DashboardController@index', 'as' => 'admin']);
 Route::resource('categories', 'Admin\CategoriesController');
+
+Route::get('/vue', function () {
+    return view('vue');
+});
+Route::get('/vue/news', function () {
+    $results =  \App\Post::all();
+    return $results;
+});
+
+Route::get('/news', function () {
+    return view('news');
+});
