@@ -4,15 +4,14 @@
 @endsection
 
 @section('styles')
-    <style>
-    </style>
+
 @endsection
 
 @section('title')
 @endsection
 
 @section('content')
-    <div class="content" id="app">
+    <div class="content" id="root">
         <p>@{{ message }}</p>
         <example-component></example-component>
         <hr>
@@ -21,6 +20,6 @@
                 @{{ item.title }}
             </li>
         </ul>
-            
+
     </div>
 @endsection

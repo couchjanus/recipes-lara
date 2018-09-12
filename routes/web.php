@@ -33,3 +33,10 @@ Route::get('/vue/news', function () {
 Route::get('/news', function () {
     return view('news');
 });
+
+
+
+Route::get('/adm', function () {
+    return view('index');
+});
+
