@@ -71,3 +71,9 @@ heroku run -a $app_name php artisan postdeploy:heroku
 ```
 
 ## cviebrock/eloquent-sluggable
+
+
+# Install NPM dependencies and add vue-router
+$ yarn install
+# or npm install vue-router
+$ yarn add vue-router

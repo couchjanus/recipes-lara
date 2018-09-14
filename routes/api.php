@@ -17,5 +17,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// Route::resource('/categories', 'Api\CategoriesController');
 
-Route::resource('/categories', 'Api\CategoriesController');
+
+// Вы должны помнить, что ко всем маршрутам заданным в файле routes/api.php автоматически добавляется префикс api.
+// Изменить это вы можете в файле RouterServiceProvider в методе mapApiRoutes():
+
+Route::get(
+    '/users',
+    function () {
+        return \App\User::all();
+    }
+);

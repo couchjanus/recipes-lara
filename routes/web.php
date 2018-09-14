@@ -11,32 +11,34 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('admin', ['uses' => 'Admin\DashboardController@index', 'as' => 'admin']);
-Route::resource('categories', 'Admin\CategoriesController');
+// Route::get('admin', ['uses' => 'Admin\DashboardController@index', 'as' => 'admin']);
+// Route::resource('categories', 'Admin\CategoriesController');
 
-Route::get('/vue', function () {
-    return view('vue');
-});
-Route::get('/vue/news', function () {
-    $results =  \App\Post::all();
-    return $results;
-});
+// Route::get('/vue', function () {
+//     return view('vue');
+// });
+// Route::get('/vue/news', function () {
+//     $results =  \App\Post::all();
+//     return $results;
+// });
 
-Route::get('/news', function () {
-    return view('news');
-});
+// Route::get('/news', function () {
+//     return view('news');
+// });
 
 
 
-Route::get('/adm', function () {
-    return view('index');
-});
+// Route::get('/adm', function () {
+//     return view('index');
+// });
+
+Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 
