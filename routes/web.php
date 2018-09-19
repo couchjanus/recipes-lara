@@ -45,4 +45,4 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::resource('items', 'ItemController');
+// Route::resource('items', 'ItemController');
